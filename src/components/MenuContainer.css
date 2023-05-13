@@ -1,0 +1,6 @@
+
+
+ion-header ion-toolbar {
+        
+    --background: linear-gradient(162deg, rgba(56, 70, 108, .8) 100%, rgba(56, 70, 108, .8) 100%),  url("../2014.jpg") center  70%;
+  }
