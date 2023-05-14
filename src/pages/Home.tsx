@@ -13,7 +13,6 @@ const Home: React.FC = () => {
     <IonPage >
       <IonContent >
         <MenuContainer></MenuContainer>
-        
       </IonContent>
       
     </IonPage>

@@ -1,0 +1,20 @@
+.content-container{
+    width: 100%;
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    
+}
+
+.itemDiv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.itemDiv:hover{
+    transform: scale(1.1);
+}  
+

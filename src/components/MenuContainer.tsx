@@ -29,7 +29,7 @@ function Menu() {
                         <IonMenuToggle >
                             <IonItem routerLink='/Leagues' lines='none'>
                                 <IonIcon icon={football} slot='start' />
-                                <IonLabel>Leagues</IonLabel>
+                                <IonLabel>Videos partidos</IonLabel>
                             </IonItem>
                         </IonMenuToggle>
                         <IonMenuToggle >
