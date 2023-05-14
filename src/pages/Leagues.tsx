@@ -1,9 +1,9 @@
 import './Leagues.css'
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar } from "@ionic/react";
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSearchbar } from "@ionic/react";
 import React, { useEffect, useState } from "react";
 import MenuContainer from "../components/MenuContainer";
 import axios from "axios";
-import { image } from "ionicons/icons";
+import { image, planet } from "ionicons/icons";
 
 
 
@@ -12,8 +12,8 @@ import { image } from "ionicons/icons";
 
 const Leagues = () => {
   
-   
-    const [data , setData] = useState<any[]>([])   //([]);
+    const [search , setSearch] = useState('')
+    const [data , setData] = useState<any[]>([])
 
     useEffect(() => {
         axios({
@@ -36,18 +36,26 @@ const Leagues = () => {
             <IonHeader>              
                 <IonToolbar>
                     <IonMenuButton slot="start"></IonMenuButton>
-                    <IonTitle slot="end">Videos partidos</IonTitle>
+                    <div className="contenedor-busqueda">
+                    <input type="text" className='input-buscar' placeholder='Buscar partido' onChange={(e) =>setSearch(e.target.value) }/>
+                    </div>
                 </IonToolbar>
             </IonHeader>
-            <IonContent>
+            <IonContent class="background">
+          
+          
+            
             <div className="content-container">
-                {data.map((item)=>(
+                {data.filter((item)=>{
+                   return search.toLocaleLowerCase() === '' ? item : item.title.toLowerCase().includes(search);
+                }).map((item)=>(
                     <div className="itemDiv" key={item.title} onClick={()=>window.open(item.matchviewUrl)}>
-                        <div className="itemHeading"><h4>{item.title}</h4></div>
+                        <div className="itemLiga">{item.competition}</div>
+                        <div className="itemHeading">{item.title}</div>
                         <div className="itemImage">
                             <img src={item.thumbnail} alt="#"/>
                         </div>
-
+                       
                     </div>
                 ))}
                 </div>
