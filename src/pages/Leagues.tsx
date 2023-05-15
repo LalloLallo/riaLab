@@ -35,9 +35,10 @@ const Leagues = () => {
             
             <IonHeader>              
                 <IonToolbar>
+                    
                     <IonMenuButton slot="start"></IonMenuButton>
                     <div className="contenedor-busqueda">
-                    <input type="text" className='input-buscar' placeholder='Buscar partido' onChange={(e) =>setSearch(e.target.value) }/>
+                    <input type="text" className='input-buscar' placeholder='🔍 Buscar partido ' onChange={(e) =>setSearch(e.target.value) }/>
                     </div>
                 </IonToolbar>
             </IonHeader>
