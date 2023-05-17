@@ -22,7 +22,6 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import MenuContainer from './components/MenuContainer';
-import Standings from './pages/Standings';
 import Leagues from './pages/Leagues';
 
 setupIonicReact();
@@ -33,7 +32,6 @@ const App: React.FC = () => (
       <MenuContainer></MenuContainer>
       <IonRouterOutlet>
         <Route exact path="/home"><Home /></Route>
-        <Route exact path="/Standings" component={Standings}/>
         <Route exact path="/Leagues" component={Leagues}/>
         <Route exact path="/"><Redirect to="/home" /></Route>
       </IonRouterOutlet>

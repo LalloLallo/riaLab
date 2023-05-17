@@ -21,21 +21,9 @@ function Menu() {
                             </IonItem>
                         </IonMenuToggle>
                         <IonMenuToggle >
-                            <IonItem routerLink='/Standings' lines='none'>
-                                <IonIcon slot='start' icon={football}/>
-                                <IonLabel>Standings</IonLabel>
-                            </IonItem>
-                        </IonMenuToggle>
-                        <IonMenuToggle >
                             <IonItem routerLink='/Leagues' lines='none'>
                                 <IonIcon icon={football} slot='start' />
                                 <IonLabel>Videos partidos</IonLabel>
-                            </IonItem>
-                        </IonMenuToggle>
-                        <IonMenuToggle >
-                            <IonItem routerLink='/Seasons' lines='none'>
-                                <IonIcon  slot='start' icon={football}/>
-                                <IonLabel>Seasons</IonLabel>
                             </IonItem>
                         </IonMenuToggle>
                     </IonList>
