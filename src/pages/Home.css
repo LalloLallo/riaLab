@@ -1,1 +1,14 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:700');
 
+.content-container{
+    z-index: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+.pais{ 
+    color: black;
+}

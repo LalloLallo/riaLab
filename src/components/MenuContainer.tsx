@@ -50,7 +50,7 @@ function Menu() {
                         <IonTitle size='large' slot='end'>Football App ⚽</IonTitle>
                     </IonToolbar>
                 </IonHeader>
-                <IonContent className="ion-padding">Resumen</IonContent>
+                <IonContent className="ion-padding"></IonContent>
             </IonPage>
         </>
     );

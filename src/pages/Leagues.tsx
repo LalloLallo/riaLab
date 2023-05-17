@@ -1,5 +1,5 @@
 import './Leagues.css'
-import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSearchbar } from "@ionic/react";
+import { IonButton, IonCard, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonContent, IonHeader, IonList, IonMenuButton, IonPage, IonTitle, IonToolbar, IonSearchbar, IonInfiniteScroll } from "@ionic/react";
 import React, { useEffect, useState } from "react";
 import MenuContainer from "../components/MenuContainer";
 import axios from "axios";
@@ -34,35 +34,27 @@ const Leagues = () => {
         <IonPage>
             
             <IonHeader>              
-                <IonToolbar>
-                    
+                <IonToolbar>  
                     <IonMenuButton slot="start"></IonMenuButton>
                     <div className="contenedor-busqueda">
-                    <input type="text" className='input-buscar' placeholder='🔍 Buscar partido ' onChange={(e) =>setSearch(e.target.value) }/>
+                        <input type="text" className='input-buscar' placeholder='🔍 Buscar partido ' onChange={(e) =>setSearch(e.target.value) }/>
                     </div>
                 </IonToolbar>
             </IonHeader>
-            <IonContent class="background">
-          
-          
-            
-            <div className="content-container">
-                {data.filter((item)=>{
-                   return search.toLocaleLowerCase() === '' ? item : item.title.toLowerCase().includes(search);
-                }).map((item)=>(
-                    <div className="itemDiv" key={item.title} onClick={()=>window.open(item.matchviewUrl)}>
-                        <div className="itemLiga">{item.competition}</div>
-                        <div className="itemHeading">{item.title}</div>
-                        <div className="itemImage">
-                            <img src={item.thumbnail} alt="#"/>
-                        </div>
-                       
-                    </div>
-                ))}
-                </div>
-            
 
-                             
+            <IonContent class="background">
+                <div className="content-container">
+                    {data.filter((item)=>{
+                    return search.toLocaleLowerCase() === '' ? item : item.title.toLowerCase().includes(search);}).map((item)=>(                
+                            <div className="itemDiv" key={item.title} onClick={()=>window.location.replace(item.matchviewUrl)}>
+                                <div className="itemLiga">{item.competition}</div>
+                                <div className="itemHeading">{item.title}</div>
+                                <div className="itemImage">
+                                    <img src={item.thumbnail} alt="#"/>
+                                </div>
+                            </div>
+                        ))}
+                </div>                            
             </IonContent>
         </IonPage>
     );
