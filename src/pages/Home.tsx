@@ -14,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     axios({
         method: "GET",
-        url: "https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=d93b91b51ee47c5ba3de772672db37bf7e2404fce54e568b8a9cc5bbd688895d",
+        url: "https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=fcda8bc6a37511242d03c9ee95de609b9e95c9eb67834d6fb49b902eadc8212c",
     })
     .then((res)=> {
         console.log(res.data);
