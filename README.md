@@ -44,9 +44,10 @@ Luego de realizar esos pasos podemos entrar a [FutbolApp](http://localhost:8100/
 ## Mock ups, mapa de navegación e historias de usuario
 ### Mock ups
 ![Mockups1](https://github.com/LalloLallo/riaLab/assets/52962992/ead7b2f9-1776-49f0-994a-28b99d5c737a)
-![Mockups2](https://github.com/LalloLallo/riaLab/assets/52962992/e312bbed-5508-4143-ad73-6368508027ee)
-![Mockups3](https://github.com/LalloLallo/riaLab/assets/52962992/46d5ab6f-9744-4dbb-b577-70e1fb5d2ad2)
-![Mockups4](https://github.com/LalloLallo/riaLab/assets/52962992/962936de-d993-4b34-897b-4731627785fb)
+![Mockups2](https://github.com/LalloLallo/riaLab/assets/52962992/7adc3b2a-295d-40ff-8c91-78d43d1663a8)
+![Mockups3](https://github.com/LalloLallo/riaLab/assets/52962992/e312bbed-5508-4143-ad73-6368508027ee)
+![Mockups4](https://github.com/LalloLallo/riaLab/assets/52962992/46d5ab6f-9744-4dbb-b577-70e1fb5d2ad2)
+![Mockups5](https://github.com/LalloLallo/riaLab/assets/52962992/962936de-d993-4b34-897b-4731627785fb)
 ### Historias de Usuario
 ![Historias de Usuario](https://github.com/LalloLallo/riaLab/assets/52962992/48a16a55-2936-4547-8fe1-fbaca8e49898)
 
