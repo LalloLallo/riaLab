@@ -48,9 +48,10 @@ Luego de realizar esos pasos podemos entrar a [FutbolApp](http://localhost:8100/
 ![Mockups3](https://github.com/LalloLallo/riaLab/assets/52962992/46d5ab6f-9744-4dbb-b577-70e1fb5d2ad2)
 ![Mockups4](https://github.com/LalloLallo/riaLab/assets/52962992/962936de-d993-4b34-897b-4731627785fb)
 ### Historias de Usuario
-![Historias de Usuario](https://github.com/LalloLallo/riaLab/assets/52962992/5e27b5bd-3410-4ba4-9dfc-8b15eaa9fe38)
+![Historias de Usuario](https://github.com/LalloLallo/riaLab/assets/52962992/48a16a55-2936-4547-8fe1-fbaca8e49898)
+
 ### Mapa de navegación
-![MapaNavegación](https://github.com/LalloLallo/riaLab/assets/52962992/4cfb2c4e-3263-4ede-95b1-86c7f883220c)
+![MapaNavegación](https://github.com/LalloLallo/riaLab/assets/52962992/b25f0d38-e43e-49d5-ad25-b67c2fc4a1aa)
 
 
 ## Servicios REST
