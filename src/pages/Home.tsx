@@ -4,6 +4,7 @@ import React, { useState,useEffect } from 'react';
 import MenuContainer from '../components/MenuContainer';
 import axios from "axios";
 import Leagues from './Leagues';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,7 +15,7 @@ const Home = () => {
   useEffect(() => {
     axios({
         method: "GET",
-        url: "https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=fcda8bc6a37511242d03c9ee95de609b9e95c9eb67834d6fb49b902eadc8212c",
+        url: "https://apiv2.allsportsapi.com/football/?met=Livescore&APIkey=014a7a45a3c297d138622a29fa4b2aa7d4c52c8043457cb13ea9632cc60e5e62",
     })
     .then((res)=> {
         console.log(res.data);
@@ -44,8 +45,16 @@ const Home = () => {
                
                 <div className="header-partidos">
                   <div className="estado">En juego</div>
-                  <center><div className="nombre-liga"><strong>{item.league_name}</strong></div></center>
-                  <center><div className="liga"><img src={item.league_logo}/></div></center>
+                  
+                  <Link to={`/LigaDePartido/${item.league_key}/${item.league_name}`}>
+                  <center><div className="nombre-liga">{item.league_name}</div></center>
+                    <center>
+                      <div className="liga">
+                        <img src={item.league_logo}/>
+                      </div>
+                    </center>
+                  </Link>
+                  
                   
                 </div>
                 
@@ -86,18 +95,7 @@ const Home = () => {
                 </div>
                     
               ))}
-        </div>
-
-		
-        
-	
-		
-		
-			
-
-
-
-	
+        </div>	
       </IonContent>
     </IonPage>
   );

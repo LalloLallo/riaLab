@@ -1,4 +1,4 @@
-import { Redirect, Route } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route } from 'react-router-dom';
 import { IonApp, IonRouterOutlet, setupIonicReact } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import Home from './pages/Home';
@@ -23,6 +23,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 import MenuContainer from './components/MenuContainer';
 import Leagues from './pages/Leagues';
+import LigaDePartido from './pages/LigaDePartido';
 
 setupIonicReact();
 
@@ -31,9 +32,10 @@ const App: React.FC = () => (
     <IonReactRouter>
       <MenuContainer></MenuContainer>
       <IonRouterOutlet>
+        <Route exact path="/"><Redirect to="/home" /></Route>
         <Route exact path="/home"><Home /></Route>
         <Route exact path="/Leagues" component={Leagues}/>
-        <Route exact path="/"><Redirect to="/home" /></Route>
+        <Route path="/LigaDePartido/:ligaID/:ligaNombre" component={LigaDePartido}/>
       </IonRouterOutlet>
     </IonReactRouter>
   </IonApp>
